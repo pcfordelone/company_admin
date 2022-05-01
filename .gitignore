@@ -1,0 +1,9 @@
+.Idea
+.DS_Store
+node_modules
+yarn-error.log
+yarn.lock
+.DS_Store
+.Idea
+node_modules
+.env
