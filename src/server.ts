@@ -1,17 +1,8 @@
-import express, { Request, Response } from "express";
+import { app } from "./app";
+require("dotenv").config();
 
-const app = express();
-const port: string = process.env.APP_PORT;
+const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-
-/**
- * Open Route
- */
-app.get("/", (request: Request, response: Response) => {
-  response.status(200).json({
-    message: "Seja bem vindo a API da Sistek IT Services",
-  });
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT} 🤟🏻 ☠️  🚀`);
 });
-
-app.listen(3000, () => console.log(`Server running in port 3000 🤟🏻 ☠️  🚀`));
