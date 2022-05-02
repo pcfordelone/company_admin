@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { router } from "./router";
 import { authRouter } from "./useCases/AuthenticateUser/routes";
-import { userRouter } from "./useCases/CreateUser/routes";
+import { userRouter } from "./useCases/userUserCases/routes";
 
 const app = express();
 

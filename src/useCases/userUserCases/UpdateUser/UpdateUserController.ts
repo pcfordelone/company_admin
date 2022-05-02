@@ -1,21 +1,18 @@
 import { Request, Response } from "express";
-import { CreateUserUseCase } from "./CreateUserUseCase";
-import bcrypt from "bcrypt";
+import { UpdateUserUseCase } from "./UpdateUserUseCase";
 
-export class CreateUserController {
-  constructor(private createUserUseCase: CreateUserUseCase) {}
+export class UpdateUserController {
+  constructor(private updateUserUseCase: UpdateUserUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
     const { name, email, password, confirmPassword, role } = request.body;
-
-    const salt = await bcrypt.genSalt(12);
-    const hashedPassword = await bcrypt.hash(password, salt);
+    const id: string = request.params.id;
 
     try {
-      const result = await this.createUserUseCase.execute({
+      const result = await this.updateUserUseCase.execute(id, {
         name,
         email,
-        password: hashedPassword,
+        password,
         role,
       });
 
