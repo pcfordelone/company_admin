@@ -1,6 +1,6 @@
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
-import { PrismaUserRepository } from "../../repositories/implementations/PrismaUserRepository";
-import { JWTAuthenticateProvider } from "../../providers/implementations/JWTAuthenticateProvider";
+import { PrismaUserRepository } from "../../../repositories/implementations/PrismaUserRepository";
+import { JWTAuthenticateProvider } from "../../../providers/implementations/JWTAuthenticateProvider";
 import { AuthenticateUserController } from "./AuthenticateUserController";
 
 const userRepository = new PrismaUserRepository();

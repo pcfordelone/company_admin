@@ -1,5 +1,5 @@
-import { IAuthenticateProvider } from "../../providers/IAuthenticateProvider";
-import { IUserRepository } from "../../repositories/IUserRepository";
+import { IAuthenticateProvider } from "../../../providers/IAuthenticateProvider";
+import { IUserRepository } from "../../../repositories/IUserRepository";
 import bcrypt from "bcrypt";
 
 export class AuthenticateUserUseCase {
