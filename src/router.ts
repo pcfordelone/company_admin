@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express";
+import { Request, response, Response, Router } from "express";
 
 const router: Router = Router();
 const port: string = process.env.APP_PORT;
