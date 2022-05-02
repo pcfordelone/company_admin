@@ -16,6 +16,8 @@ export class CreateUserUseCase {
 
     const user = new UserEntity(data);
 
-    await this.userRepository.createUser(user);
+    const result = await this.userRepository.createUser(user);
+
+    return result;
   }
 }
